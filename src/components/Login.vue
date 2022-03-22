@@ -85,7 +85,8 @@ export default {
           "/hao/userInfo/login",
           this.loginForm
         );
-        return console.log(res.msg);
+        if(res.status !== 200) return this.$message.error(res.msg)
+        return this.$message.success(res.msg)
       });
     },
   },
