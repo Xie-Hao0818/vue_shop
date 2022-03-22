@@ -85,8 +85,10 @@ export default {
           "/hao/userInfo/login",
           this.loginForm
         );
-        if(res.status !== 200) return this.$message.error(res.msg)
-        return this.$message.success(res.msg)
+        if (res.status !== 200) return this.$message.error(res.msg);
+        this.$message.success(res.msg);
+        window.sessionStorage.setItem("token", res.token); //保存token
+        this.$router.push("/home"); //页面跳转
       });
     },
   },
