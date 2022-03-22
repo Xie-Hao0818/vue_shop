@@ -1,4 +1,4 @@
-# vue_shop2
+# vue_shop
 <<<<<<< HEAD
 #  分支合并
 =======
